@@ -42,6 +42,16 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+    <script>
+        function mostrarProyecto(x) {
+            $('.info-'.concat(x)).show();
+        }
+
+        function ocultarProyecto(x) {
+            $('.info-'.concat(x)).hide();
+        }
+    </script>
+
 </head>
 
 <body>
@@ -147,6 +157,110 @@
         </div>
     </div>
     <!--/QUIENES SOMOS-->
+
+    <div class="clear"></div>
+
+    <!--SERVICIOS-->
+    <div id="servicios">
+        <div class="servicios-icons">
+
+            <div class="servicio servicio-webdev">
+                <div class="imagen-servicio">
+                    <img src="images/servicios/PNG/servicios_desarrollo_web.png" alt="">
+                </div>
+                <p>Desarrollo Web</p>
+            </div>
+
+            <div class="separador-cont">
+                <img class="separador-servicio" src="images/servicios/PNG/separador-vertical.png" alt="">
+            </div>
+
+            <div class="servicio servicio-mobiledev">
+                <div class="imagen-servicio">
+                    <img src="images/servicios/PNG/servicios_desarrollo_movil.png" alt="">
+                </div>
+                <p>Desarrollo móvil</p>
+            </div>
+
+            <div class="separador-cont">
+                <img class="separador-servicio" src="images/servicios/PNG/separador-vertical.png" alt="">
+            </div>
+
+            <div class="servicio servicio-cloud">
+                <div class="imagen-servicio">
+                    <img src="images/servicios/PNG/servicios_nube.png" alt="">
+                </div>
+                <p>Servicios en la nube</p>
+            </div>
+
+        </div>
+        <div class="servicios-title">
+            <p>Servicios</p>
+        </div>
+    </div>
+    <!--/SERVICIOS-->
+
+    <div class="clear"></div>
+
+    <!--EQUIPO-->
+    <!--/EQUIPO-->
+
+    <div class="clear"></div>
+
+    <!--PORTAFOLIO-->
+    <div id="portafolio">
+        <div class="proyecto-contenedor">
+            <div class="proyecto box-1" onmouseover="mostrarProyecto(1)" onmouseout="ocultarProyecto(1)">
+                <div class="proyecto-info info-1">
+                    <p class="titulo">Congreso Minero 2016</p>
+                    <p class="divider"></p>
+                    <p class="descripcion">Descripción del proyecto.</p>
+                </div>
+            </div>
+
+            <div class="proyecto box-2" onmouseover="mostrarProyecto(2)" onmouseout="ocultarProyecto(2)">
+                <div class="proyecto-info info-2">
+                    <p class="titulo">ExpoSupply 2018</p>
+                    <p class="divider"></p>
+                    <p class="descripcion">Descripción del proyecto.</p>
+                </div>
+            </div>
+
+            <div class="proyecto box-3" onmouseover="mostrarProyecto(3)" onmouseout="ocultarProyecto(3)">
+                <div class="proyecto-info info-3">
+                    <p class="titulo">Foxy Events</p>
+                    <p class="divider"></p>
+                    <p class="descripcion">Descripción del proyecto.</p>
+                </div>
+            </div>
+
+            <div class="proyecto box-4" onmouseover="mostrarProyecto(4)" onmouseout="ocultarProyecto(4)">
+                <div class="proyecto-info info-4">
+                    <p class="titulo">Congreso Panvet</p>
+                    <p class="divider"></p>
+                    <p class="descripcion">Descripción del proyecto.</p>
+                </div>
+            </div>
+
+            <div class="proyecto box-5" onmouseover="mostrarProyecto(5)" onmouseout="ocultarProyecto(5)">
+                <div class="proyecto-info info-5">
+                    <p class="titulo">Paragon Latam</p>
+                    <p class="divider"></p>
+                    <p class="descripcion">Descripción del proyecto.</p>
+                </div>
+            </div>
+
+            <div class="proyecto box-0">
+                <p>Portafolio</p>
+            </div>
+        </div>
+    </div>
+    <!--/PORTAFOLIO-->
+
+    <div class="clear"></div>
+
+    <!--CONTACTANOS-->
+    <!--/CONTACTANOS-->
 
     <div class="clear"></div>
 
