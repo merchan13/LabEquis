@@ -603,16 +603,10 @@ CONTÁCTENOS
  }
 
 .contact{
-    background-image: url(../images/portafolio/PNG/portafolio_fondo.png);
+    background-image: url(../images/contacto/PNG/contacto_formulario_fondo.png);
 }
- .contact-text{
-   margin:45px auto;
- }
 
- .mail-message-area{
-   width:100%;
-   padding:0 15px;
- }
+
 
  .mail-message{
    width: 100%;
@@ -620,7 +614,7 @@ CONTÁCTENOS
    -webkit-transition: all 0.7s;
    -moz-transition: all 0.7s;
    transition: all 0.7s;
-   margin:0 auto;
+   margin-left:60px;
    border-radius: 0;
  }
 
@@ -638,8 +632,9 @@ CONTÁCTENOS
 /* Input Styles */
 
  .form{
-   margin-top: 30px;
-   width: 100%;
+   margin-top: 20px;
+   width: 75%;
+   margin-left: 150px;
    padding: 15px;
    background:#f8f8f8;
    border:1px solid rgba(0, 0, 0, 0.075);
@@ -666,61 +661,33 @@ CONTÁCTENOS
    max-height: 200px;
    max-width: 100%;
    border-radius: 5px;
+   margin-left: -25px;
  }
 
-/* Generic Button Styles */
-
- .button{
-   padding:8px 12px;
-   background:#0A5175;
-   display: block;
-   width:120px;
-   margin:10px 0 0px 0;
-   border-radius:3px;
-   -webkit-transition: all 0.3s;
-   -moz-transition: all 0.3s;
-   transition: all 0.3s;
-   text-align:center;
-   font-size:0.8em;
-   box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
-   -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
-   -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
- }
-
- .button:hover{
-   background:#8BC3A3;
-   color:white;
- }
 
 /* Send Button Styles */
 
  .form-btn{
-   width:180px;
-   display: block;
-   height: auto;
-   padding:15px;
-   color:#fff;
-   background:#8BC3A3;
-   border:none;
-   border-radius:3px;
-   outline: none;
-   -webkit-transition: all 0.3s;
-   -moz-transition: all 0.3s;
-   transition: all 0.3s;
-   margin:auto;
-   box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
-   -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
-   -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.10);
- }
-
- .form-btn:hover{
-   background:#111;
+   font-size: 15px;
+   letter-spacing: 1px;
+   display: inline-block;
+   width: 100px;
+   padding: 7px 5px;
    color: white;
-   border:none;
+   border: 0.5px solid white;
+   font-weight: bold;
+   text-align: center;
+   outline: none;
+   text-decoration: none;
+   transition: color 0.5s ease-out, background-color 0.5s ease-out;
+    background-color: rgba(255, 255, 255, .05);
  }
 
- .form-btn:active{
-   opacity: 0.9;
+ .form-btn:hover,
+ .form-btn:active {
+     background-color: rgba(255, 255, 255, .7);
+     color: white;
+     transition: color 0.5s ease-in, background-color 0.5s ease-in;
  }
 center{
  margin-top:330px;
@@ -733,15 +700,25 @@ input {
 }
 #contactenos h1
 {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top:40px;
+  margin-bottom: 40px;
   margin-left: 30px;
   font-family: Helvetica-Heavy;
   color: #283880;
   font-size: 35px;
   text-transform: uppercase;
-  letter-spacing: 15px;
+  letter-spacing: 10px;
   top: 50%;
   left: 50%;
   background-color: white;
+}
+
+/*
+================================================================
+FOOTER
+================================================================
+*/
+.footing {
+  background-color: #00B7CA;
+  width:100%;
 }
