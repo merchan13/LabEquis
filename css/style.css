@@ -718,7 +718,19 @@ input {
 FOOTER
 ================================================================
 */
-.footing {
-  background-color: #00B7CA;
-  width:100%;
+.footer {
+
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 70px;
+  line-height: 5px; /* Vertically center the text there */
+    background-color: #00B7CA;
+    margin-top: -20px;
+}
+
+.copyright{
+  margin-top:50px;
+  text-align: center;
+  color: white;
 }
