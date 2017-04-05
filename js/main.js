@@ -32,6 +32,12 @@
                 $('body').removeClass('scrolled');
             }
 
+            if ($(window).scrollTop() > 500) {
+                alert("Entro 1");
+            } else {
+                alert("Entro 2");
+            }
+
             $(window).scroll(function () {
                     if ($(window).scrollTop() > $(".about-us-title").position().top {
                             alert($(".about-us-title").position().top());
@@ -40,8 +46,6 @@
                             $('body').removeClass('scrolled');
                         }
                     });
-
-
             };
 
             var goToTop = function () {
