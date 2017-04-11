@@ -87,7 +87,7 @@
     <!--MENU NAVBAR-->
     <nav class="labx-navbar" id="fixed-navbar" role="">
         <img id="navbar-logo" src="images/menu/logo_menu.png" alt="labequis-logo">
-        <ul>
+        <ul class="hide-in-resp">
             <li>
                 <a id="labx-headerlink" href="#">
                     <p class="animated fadeIn">Inicio</p>
@@ -119,6 +119,41 @@
                 </a>
             </li>
         </ul>
+
+        <a href="#menu" id="toggle"><span></span></a>
+        <div id="menu">
+            <li>
+                <a id="labx-headerlink" href="#">
+                    <p class="">Inicio</p>
+                </a>
+            </li>
+            <li>
+                <a id="about-uslink" href="#">
+                    <p class="">Quiénes somos</p>
+                </a>
+            </li>
+            <li>
+                <a id="servicioslink" href="#">
+                    <p class="">Servicios</p>
+                </a>
+            </li>
+            <li>
+                <a id="equipolink" href="#">
+                    <p class="">Equipo</p>
+                </a>
+            </li>
+            <li>
+                <a id="portafoliolink" href="#">
+                    <p class="">Portafolio</p>
+                </a>
+            </li>
+            <li>
+                <a id="contactenoslink" href="#">
+                    <p class="">Contacto</p>
+                </a>
+            </li>
+        </div>
+
     </nav>
     <!--/MENU NAVBAR-->
 
@@ -141,8 +176,10 @@
 
     <!--SERVICIOS-->
     <div id="servicios">
+        <div class="servicios-title-resp">
+            <p>Servicios</p>
+        </div>
         <div class="servicios-icons">
-
             <div class="servicio servicio-webdev">
                 <div class="imagen-servicio">
                     <img src="images/servicios/PNG/servicios_desarrollo_web.png" alt="">
@@ -150,8 +187,8 @@
                 <p>Desarrollo Web</p>
             </div>
 
-            <div class="separador-cont">
-                <img class="separador-servicio" src="images/servicios/PNG/separador-vertical.png" alt="">
+            <div class="separador-cont hide-in-resp">
+                <img class="separador-servicio hide-in-resp" src="images/servicios/PNG/separador-vertical.png" alt="">
             </div>
 
             <div class="servicio servicio-mobiledev">
@@ -161,8 +198,8 @@
                 <p>Desarrollo móvil</p>
             </div>
 
-            <div class="separador-cont">
-                <img class="separador-servicio" src="images/servicios/PNG/separador-vertical.png" alt="">
+            <div class="separador-cont hide-in-resp">
+                <img class="separador-servicio hide-in-resp" src="images/servicios/PNG/separador-vertical.png" alt="">
             </div>
 
             <div class="servicio servicio-cloud">
@@ -173,7 +210,7 @@
             </div>
 
         </div>
-        <div class="servicios-title">
+        <div class="servicios-title hide-in-resp">
             <p>Servicios</p>
         </div>
     </div>
@@ -200,7 +237,7 @@
                     <div>
                         <a href="#">
                             <h2>Javier Merchán</h2>
-                            <p>Marico Superior</p>
+                            <p>Developer</p>
                         </a>
                     </div>
                 </li>
@@ -216,7 +253,7 @@
                     <div>
                         <a href="#">
                             <h2>Daniel Da Mata</h2>
-                            <p>Marico Inferior</p>
+                            <p>Developer</p>
                         </a>
                     </div>
                 </li>
@@ -409,6 +446,60 @@
             goToByScroll($(this).attr("id"));
             //alert('holi');
         });
+
+        //$("#header-menu > ul > li > a").click(function (e) {
+        $("#menu > li > a").click(function (e) {
+            // Prevent a page reload when a link is pressed
+            e.preventDefault();
+            // Call the scroll function
+            toggleClass(document.getElementById('toggle'), 'on');
+            goToByScroll($(this).attr("id"));
+            //alert('holi');
+        });
+
+
+        var theToggle = document.getElementById('toggle');
+
+        // based on Todd Motto functions
+        // http://toddmotto.com/labs/reusable-js/
+
+        // hasClass
+        function hasClass(elem, className) {
+            return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+        }
+        // addClass
+        function addClass(elem, className) {
+            if (!hasClass(elem, className)) {
+                elem.className += ' ' + className;
+            }
+        }
+        // removeClass
+        function removeClass(elem, className) {
+            var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
+            if (hasClass(elem, className)) {
+                while (newClass.indexOf(' ' + className + ' ') >= 0) {
+                    newClass = newClass.replace(' ' + className + ' ', ' ');
+                }
+                elem.className = newClass.replace(/^\s+|\s+$/g, '');
+            }
+        }
+        // toggleClass
+        function toggleClass(elem, className) {
+            var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, " ") + ' ';
+            if (hasClass(elem, className)) {
+                while (newClass.indexOf(" " + className + " ") >= 0) {
+                    newClass = newClass.replace(" " + className + " ", " ");
+                }
+                elem.className = newClass.replace(/^\s+|\s+$/g, '');
+            } else {
+                elem.className += ' ' + className;
+            }
+        }
+
+        theToggle.onclick = function () {
+            toggleClass(this, 'on');
+            return false;
+        }
     </script>
 
 </body>
