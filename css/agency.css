@@ -276,7 +276,7 @@ fieldset[disabled] .btn-xl.active {
 header {
     background-image: url('../img/header2.jpg');
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-position: center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -881,10 +881,13 @@ body {
     webkit-tap-highlight-color: #00b7ca;
 }
 
-@media only screen and (max-device-width: 375px) {
+@media only screen and (max-device-width: 414px) {
     .navbar-custom .navbar-brand img {
         width: 65px;
         height: 20px;
+    }
+    header {
+        background-attachment: scroll;
     }
     header .intro-text .intro-heading img {
         width: 200px;
