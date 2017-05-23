@@ -164,16 +164,41 @@ fieldset[disabled] .btn-xl.active {
     border-color: #00ABDE;
 }
 
-.btn-up {
+.btn-head {
+    color: #00ABDE;
+    border-color: #00ABDE;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 20px 40px;
+}
+
+.btn-head:hover,
+.btn-head:focus,
+.btn-head:active,
+.btn-head.active,
+.open .dropdown-toggle.btn-xl {
     color: white;
-    background-color: black;
-    border-color: black;
+    background-color: #0099c7;
+    border-color: #0092a1;
+}
+
+.btn-head:active,
+.btn-head.active,
+.open .dropdown-toggle.btn-xl {
+    background-image: none;
+}
+
+.btn-up {
+    color: #0099c7;
+    border-color: #0099c7;
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
     border-radius: 50%;
     font-size: 30px;
-    padding: 20px 40px;
 }
 
 .btn-up:hover,
@@ -198,7 +223,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-custom {
-    background-color: #222222;
+    background-color: rgba(0, 0, 0, 0.85);
     border-color: transparent;
 }
 
@@ -288,7 +313,7 @@ fieldset[disabled] .btn-xl.active {
 
 @media (min-width: 768px) {
     .navbar-custom.affix {
-        background-color: #323232;
+        background-color: rgba(0, 0, 0, 0.85);
         padding: 10px 0;
     }
     .navbar-custom.affix .navbar-brand {
@@ -302,7 +327,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 header {
-    background-image: url('../img/header2.jpg');
+    background-image: url('../img/header.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -310,7 +335,7 @@ header {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    text-align: center;
+    text-align: left;
     color: white;
 }
 
@@ -329,7 +354,6 @@ header .intro-text .intro-lead-in {
 
 header .intro-text .intro-heading {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
     font-weight: 700;
     font-size: 50px;
     line-height: 50px;
@@ -338,14 +362,15 @@ header .intro-text .intro-heading {
 
 header .intro-text .intro-heading img {
     display: inline;
-    width: 325px;
-    height: 100px;
+    width: 450px;
+    height: 138px;
+    margin-top: 130px;
 }
 
 @media (min-width: 768px) {
     header .intro-text {
-        padding-top: 300px;
-        padding-bottom: 120px;
+        padding-top: 180px;
+        padding-bottom: 150px;
     }
     header .intro-text .intro-lead-in {
         font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -356,11 +381,13 @@ header .intro-text .intro-heading img {
     }
     header .intro-text .intro-heading {
         font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        text-transform: uppercase;
         font-weight: 700;
         font-size: 75px;
         line-height: 75px;
         margin-bottom: 50px;
+    }
+    header .intro-text .intro-heading h3 {
+        text-transform: none;
     }
 }
 
@@ -915,10 +942,11 @@ body {
         height: 20px;
     }
     header {
+        background-image: url('../img/bg-mobile.png');
         background-attachment: scroll;
+        text-align: center;
     }
     header .intro-text .intro-heading img {
-        width: 200px;
-        height: 62px;
+        display: none;
     }
 }
